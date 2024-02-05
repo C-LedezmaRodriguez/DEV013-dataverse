@@ -6,27 +6,6 @@ export const example = () => {
 
 export const sortByName = (data, sortBy, sortOrder) => {
 
-    // const workOrder = data.toSorted((a,b) => {
-    //   if(sortOrder === 'asc'){    
-    //     if(a[sortBy] === b[sortBy]){
-    //       return 0;
-    //     }
-    //     if(a[sortBy]< b[sortBy]){
-    //       return -1;
-    //     }
-    //     return 1;
-    //   }
-    //   else {
-    //     if(a[sortBy] === b[sortBy]){
-    //       return 0;
-    //     }
-    //     if (a[sortBy] > b[sortBy]){
-    //       return -1;
-    //     }
-    //     return 1;
-    //   } 
-    // });
-    // return workOrder;
       const sortWork = data.slice();
     
       sortWork.sort((a, b) => {
@@ -41,6 +20,28 @@ export const sortByName = (data, sortBy, sortOrder) => {
       });
     
       return sortWork;
+       
+      // const workOrder = data.toSorted((a,b) => {
+      //   if(sortOrder === 'asc'){    
+      //     if(a[sortBy] === b[sortBy]){
+      //       return 0;
+      //     }
+      //     if(a[sortBy]< b[sortBy]){
+      //       return -1;
+      //     }
+      //     return 1;
+      //   }
+      //   else {
+      //     if(a[sortBy] === b[sortBy]){
+      //       return 0;
+      //     }
+      //     if (a[sortBy] > b[sortBy]){
+      //       return -1;
+      //     }
+      //     return 1;
+      //   } 
+      // });
+      // return workOrder;
 
 };
 
