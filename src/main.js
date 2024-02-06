@@ -1,5 +1,5 @@
-import { example } from "./dataFunctions.js";
-import { sortByName } from "./dataFunctions.js";
+// import { example } from "./dataFunctions.js";
+import { sortByName, filterByAnnualVisitors } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 
 import data from "./data/dataset.js";
@@ -13,4 +13,9 @@ rootFill.appendChild(renderItems(data));
     rootFill.innerHTML = "";
     rootFill.appendChild(renderItems(orderData));
   });
-  
+  const selectFilter = document.querySelector('select[data-testid="select-filter"]');
+  selectFilter.addEventListener("change", function (event) {
+    const filterData = filterByAnnualVisitors(data, "annualVisitors", event.target.value);
+    rootFill.innerHTML = "";
+    rootFill.appendChild(renderItems(filterData));
+  });
