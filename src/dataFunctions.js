@@ -3,22 +3,22 @@
 
 export const filterByAnnualVisitors = (data, filterBy, value) => {
   
-  // const [min, max] = value.split('-').map(Number);
+  const [min, max] = value.split('-').map(Number);
 
-  // const workFilter = data.filter(visitors => visitors.facts[filterBy] >= min && visitors.facts[filterBy] <= max);
-  // return workFilter;
+  const workFilter = data.filter(visitors => visitors.facts[filterBy] >= min && visitors.facts[filterBy] <= max);
+  return workFilter;
 
-  if (value === "firstRange") {
-    return data.filter(viaje => viaje.facts[filterBy] >= 0 && viaje.facts[filterBy] <= 2000000);
-  } else if (value === "secondRange") {
-    return data.filter(viaje => viaje.facts[filterBy] > 2000000 && viaje.facts[filterBy] <= 4000000);
-  } else if (value === "thirdRange") {
-    return data.filter(viaje => viaje.facts[filterBy] > 4000000 && viaje.facts[filterBy] <= 6000000);
-  } else if (value === "fourthRange") {
-    return data.filter(viaje => viaje.facts[filterBy] > 6000000 && viaje.facts[filterBy] <= 8000000);
-  } else if (value === "fifthRange") {
-    return data.filter(viaje => viaje.facts[filterBy] > 8000000 && viaje.facts[filterBy] <= 10000000);
-  }
+  // if (value === "firstRange") {
+  //   return data.filter(visitors => visitors.facts[filterBy] >= 0 && visitors.facts[filterBy] <= 2000000);
+  // } else if (value === "secondRange") {
+  //   return data.filter(visitors => visitors.facts[filterBy] > 2000000 && visitors.facts[filterBy] <= 4000000);
+  // } else if (value === "thirdRange") {
+  //   return data.filter(visitors => visitors.facts[filterBy] > 4000000 && visitors.facts[filterBy] <= 6000000);
+  // } else if (value === "fourthRange") {
+  //   return data.filter(visitors => visitors.facts[filterBy] > 6000000 && visitors.facts[filterBy] <= 8000000);
+  // } else if (value === "fifthRange") {
+  //   return data.filter(visitors => visitors.facts[filterBy] > 8000000 && visitors.facts[filterBy] <= 10000000);
+  // }
 
 };
 
