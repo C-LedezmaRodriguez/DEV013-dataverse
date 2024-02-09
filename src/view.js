@@ -88,7 +88,6 @@ export const renderItems = (data) => {
     const visitorsText = document.createElement("dd");
     visitorsText.setAttribute("itemprop", "annualVisitors");
     visitorsText.innerHTML = "Annual visitors: " + item.facts.annualVisitors;
-    // visitorsText.style.display = "none";
     visitorsWork.style.display = "none";
 
     const wonderWork = document.createElement("dt");
@@ -146,13 +145,11 @@ export const renderItems = (data) => {
       imagePop.style.width = "50%";
       imagePop.style.height = "50%";
       imagePop.style.borderRadius = "50px"
-      // imagePop.style.paddingInlineStart = "30px";
       imagePop.style.marginTop = "4%";
 
       const popupContainerDiv = document.createElement("div");
       popupContainerDiv.className = "popup-container";
       popupContainerDiv.style.display = "block";
-      // popupContainerDiv.style.marginBottom = "10%";
       popupContainerDiv.style.paddingLeft = "4%";
       popupContainerDiv.style.alignContent = "flex-start";
       popupContainerDiv.style.fontSize = "14px"
