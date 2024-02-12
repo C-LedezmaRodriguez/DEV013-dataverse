@@ -30,8 +30,6 @@ selectSort.addEventListener("change", function (event) {
   rootFill.innerHTML = "";
   rootFill.appendChild(renderItems(orderData));
 });
-
-
 const buttonStats = document.getElementById("statistics");
 buttonStats.addEventListener("click", function popupStats(){
   const stats = computeStats(data);
@@ -45,14 +43,11 @@ buttonStats.addEventListener("click", function popupStats(){
   popupStatsWonder.addEventListener('click', function closePopup() {
     rootFill.removeChild(popupStatsWonder);
   });
-
 });
-
-const buttonClear = document.getElementById("buttonClear");
-buttonClear.addEventListener("click", function clear() {
+const buttonClear = document.querySelector('button[data-testid="button-clear"]');
+buttonClear.addEventListener("click", function clear(){
   selectFilter.selectedIndex = 0;
   selectSort.selectedIndex = 0;
   rootFill.innerHTML = "";
-
   rootFill.appendChild(renderItems(data));
 });
